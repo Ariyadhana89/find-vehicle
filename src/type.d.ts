@@ -14,8 +14,4 @@ declare namespace Definitions {
     type: type[];
     subParts?: part[];
   }
-
-  // export interface ICrudObj {
-  //   [key: string]: any;
-  // }
 }

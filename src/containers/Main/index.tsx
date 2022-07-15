@@ -55,11 +55,12 @@ const Main = () => {
       alert("You need to select a type!");
       return;
     }
-
     const selectedVehicle = vehicleList.filter(
       (val) =>
         val.type.indexOf(selectedType) !== -1 &&
-        val.parts.some((id) => selectedParts.indexOf(id) !== -1)
+        (selectedParts.length === 0
+          ? true
+          : val.parts.some((id) => selectedParts.indexOf(id) !== -1))
     );
     setVehicle(selectedVehicle);
   };
